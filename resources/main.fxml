@@ -4,11 +4,51 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
    <center>
-      <Label text="Hello World" BorderPane.alignment="CENTER" />
+      <ListView fx:id="lvStudenti" prefHeight="200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding></ListView>
    </center>
+   <right>
+      <GridPane hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Ime:" />
+            <TextField fx:id="fldIme" GridPane.columnIndex="1" />
+            <Label text="Prezime:" GridPane.rowIndex="1" />
+            <Label text="E-mail:" GridPane.rowIndex="2" />
+            <Label text="Korisničko ime:" GridPane.rowIndex="3" />
+            <Label text="Password:" GridPane.rowIndex="4" />
+            <TextField fx:id="fldPrezime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="fldMail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="fldUsername" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="fldPassword" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </right>
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button defaultButton="true" mnemonicParsing="false" text="Dodaj" />
+            <Button cancelButton="true" mnemonicParsing="false" text="Kraj" />
+        </buttons>
+      </ButtonBar>
+   </bottom>
    <padding>
       <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
    </padding>
